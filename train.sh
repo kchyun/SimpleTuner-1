@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+export WANDB_API_KEY="62ab72153019f68c8b3114f461fec48be436b09d"
+
 # Pull config from config.env
 [ -f "config/config.env" ] && source config/config.env
 

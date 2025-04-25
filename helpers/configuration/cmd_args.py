@@ -1630,6 +1630,12 @@ def get_argument_parser():
         ),
     )
     parser.add_argument(
+        "--tracker_entity_name",
+        type=str,
+        default=None,
+        help="The name of the entity to track with the tracker.",
+    )
+    parser.add_argument(
         "--tracker_run_name",
         type=str,
         default="simpletuner-testing",

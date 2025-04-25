@@ -1351,12 +1351,16 @@ class Trainer:
             tracker_run_name = (
                 self.config.tracker_run_name or "simpletuner-training-run"
             )
+            tracker_entity_name = (
+                self.config.tracker_entity_name
+            )
             try:
                 self.accelerator.init_trackers(
                     project_name,
                     config=vars(public_args),
                     init_kwargs={
                         "wandb": {
+                            "entity": tracker_entity_name,
                             "name": tracker_run_name,
                             "id": f"{public_args_hash}",
                             "resume": "allow",
